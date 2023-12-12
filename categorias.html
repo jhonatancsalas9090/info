@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cantante - Categorías</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      
+      background-size: cover;
+      background-position: center;
+
+      
+      
+    }
+    
+    .navbar-brand img {
+      border-radius: 50%;
+      max-width: 70px; 
+      height: auto;
+      position: absolute;
+      top: 5px;
+      right: 10px;
+    }
+    
+    .whatsapp-icon {
+      margin-left: auto;
+    }
+
+    .whatsapp-icon a img {
+      max-width: 30px; 
+      height: auto;
+    }
+    main {
+      padding: 20px;
+    }
+
+    footer {
+      background-color: darkgreen;
+      background-size: cover;
+      background-position: center;
+      border-radius: 30px;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      bottom: 0;
+      width: 100%;
+    }
+    
+    .mi-caja {
+      margin-bottom: 30px;
+      flex-direction: row;
+
+    }
+
+    .mi-caja img {
+      
+      display: block;
+    }
+    body {
+      background-color: mediumspringgreen;
+    }
+    
+    
+    
+  </style>
+</head>
+<body>
+    <header>
+        <a class="navbar-brand" href="cantantes.html">
+          <img src="logo.avif" alt="logo" width="120px" height="500";>
+        </a>
+
+        <div id="search-container">
+          <input type="text" id="search-box" placeholder="Ingresa tu búsqueda...">
+          <button id="search-button" class="btn btn-primary">Buscar</button>
+          <div id="search-results"></div>
+        </div>   
+    </header>
+  <main>
+    <h2>Categorías de cantantes</h2>
+    
+    <div class="col-md-12">
+
+      <div class="row">
+        <div class="col-md-4 mi-caja">
+          <img src="imag/git7.jpg" class="card-img-top" alt="Categoría 1" width="300" height="300">
+          <div class="card-body">
+            <h5 class="card-title">Diez puntos</h5>
+            <p class="card-text"></p>
+            <a href="productos_categoria1.html" class="btn btn-primary">Ver cantante</a>
+          </div>
+        </div>
+  
+        <div class="col-md-4 mi-caja">
+          <img src="imag/git8.jpg" class="card-img-top" alt="Categoría 2" width="300" height="300">
+          <div class="card-body">
+            <h5 class="card-title">La Gota</h5>
+            <p class="card-text"></p>
+            <a href="productos_categoria2.html" class="btn btn-primary">Ver cantante</a>
+          </div>
+        </div>
+  
+        <div class="col-md-4 mi-caja">
+          <img src="imag/git5.jpg" class="card-img-top" alt="Categoría 1" width="300" height="300">
+          <div class="card-body">
+            <h5 class="card-title">Elias Ayaviri</h5>
+            <p class="card-text"></p>
+            <a href="productos_categoria3.html" class="btn btn-primary">Ver cantante</a>
+          </div>
+        </div>
+
+        <div class="col-md-4 mi-caja">
+          <img src="imag/git1.jpg" class="card-img-top" alt="Categoría 2" width="300" height="300">
+          <div class="card-body">
+            <h5 class="card-title">Bruno Mars</h5>
+            <p class="card-text"></p>
+            <a href="productos_categoria4.html" class="btn btn-primary">Ver cantante</a>
+          </div>
+        </div>
+  
+        <div class="col-md-4 mi-caja">
+          <img src="imag/git2.jpg" class="card-img-top" alt="Categoría 1" width="300" height="300">
+          <div class="card-body">
+            <h5 class="card-title">Sabor Sabor</h5>
+            <p class="card-text"></p>
+            <a href="productos_categoria5.html" class="btn btn-primary">Ver cantante</a>
+          </div>
+        </div>
+
+        <div class="col-md-4 mi-caja">
+          <img src="imag/git3.jpg" class="card-img-top" alt="cantante" width="300" height="300">
+          <div class="card-body">
+            <h5 class="card-title">Caribe cumbia</h5>
+            <p class="card-text"></p>
+            <a href="productos_categoria6.html" class="btn btn-primary">Ver cantante</a>
+          </div>
+        </div>
+    </div>
+  </main>
+  <footer>
+    <h4>&copy; Categorías de cantantes 2023</h4>
+    <div class="whatsapp-icon">
+      <a href="https://api.whatsapp.com/" target="_blank">
+        <img src="4375153_logo_whatsapp_icon.png" alt="WhatsApp" >
+      </a>
+      <a href="https://gmail.google.com/" target="_blank">
+        <img src="gmail.png" alt="gmail" >
+      </a>
+      <a href="https://www.facebook.com/" target="_blank">
+        <img src="facebook.png" alt="facebook" >
+      </a>
+      <a href="https://www.instagram.com/" target="_blank">
+        <img src="instagram.png" alt="instagram" >
+      </a>
+      <a href="https://www.google.com/maps" target="_blank">
+        <img src="google-maps.png" alt="google maps" >
+      </a>
+      
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('search-button').addEventListener('click', function () {
+      var searchTerm = document.getElementById('search-box').value.toLowerCase();
+      var searchResults = document.getElementById('search-results');
+      searchResults.innerHTML = '';
+      var cajas = document.querySelectorAll('.mi-caja');
+      cajas.forEach(function (caja) {
+        var titulo = caja.querySelector('.card-title').textContent.toLowerCase();
+        var descripcion = caja.querySelector('.card-text').textContent.toLowerCase();
+  
+        if (titulo.includes(searchTerm) || descripcion.includes(searchTerm)) {
+          searchResults.appendChild(caja.cloneNode(true));
+        }
+      });
+      if (searchResults.children.length === 0) {
+        searchResults.innerHTML = '<p>No se encontraron productos.</p>';
+      }
+    });
+  </script>
+</body>
+</html>
