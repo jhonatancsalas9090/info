@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cantante</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background: url("black.jpg") center/cover no-repeat;
+    }
+
+    header {
+      background: #962121 url("pie-de-pagina.jpg") center/cover no-repeat;
+      color: #fff;
+      padding: 10px;
+    }
+
+    .navbar-brand img {
+      border-radius: 50%;
+      max-width: 60px;
+      height: auto;
+    }
+
+    .whatsapp-icon {
+      margin-left: auto;
+    }
+
+    .whatsapp-icon a img {
+      max-width: 30px;
+      height: auto;
+      margin-right: 10px;
+    }
+
+    .product-section, .advertisement-section {
+      background-color: rgba(105, 29, 29, 0.9);
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-section h2, .advertisement-section h2 {
+      color: #a82f2f;
+      font-size: 28px;
+      text-align: center;
+    }
+
+    .product-card, .advertisement-card {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .product-card img, .advertisement-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .product-card h5, .advertisement-card h5 {
+      color: rgb(248, 242, 242);
+      font-size: 20px;
+    }
+
+    .product-card p, .advertisement-card p {
+      color: #fcfafa;
+      font-size: 16px;
+    }
+
+    footer {
+      background: url("pie-de-pagina.jpg") center/cover no-repeat;
+      border-radius: 30px;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      bottom: 0;
+      width: 100%;
+    }
+
+    p {
+      color: rgb(224, 218, 216);
+      font-size: 20px;
+    }
+
+    h4 {
+      color: cadetblue;
+    }
+
+    h6 {
+      color: white;
+    }
+
+    h2 {
+      color: rgb(230, 221, 221);
+      font-family: fantasy;
+    }
+
+    footer img {
+      margin-right: 30px;
+    }
+
+    .marquee-container {
+      width: 300px; 
+      overflow: hidden;
+    }
+
+    .marquee-content {
+      display: flex;
+      animation: marqueeAnimation 15s linear infinite;
+    }
+
+    @keyframes marqueeAnimation {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+    .video-container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .play-icon {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      font-size: 24px;
+      color: #fff;
+    }
+
+    .video-container:hover .play-icon {
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+        <img src="logo.avif" alt="logo">
+      </a>
+      <a class="navbar-brand" href="#">Cantante favorito</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="categorias.html">Categorías</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="productos.html">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="agenda.html">Agenda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.html">Contacto</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="videosvips.html">VideosVips</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="credito.html">Credito</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ml-auto">
+        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">Iniciar sesión</a>
+      </div>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="product-section" style="background: url('fondo-productos.jpg') center/cover no-repeat;">
+      <div class="row">
+      
+        <div class="col-md-4 product-card">
+          <div class="marquee-container">
+            <div class="marquee-content">
+              <img src="imag/cantante1.jpg" class="card-img-top" alt="Nicky Jam">
+              <img src="imag/cantante2.jpg" class="card-img-top" alt="Nicky Jam">
+              <img src="imag/cantante3.jpg" class="card-img-top" alt="Nicky Jam">
+            </div>
+          </div>
+          <h5 class="card-title">Nicky Jam</h5>
+          <p class="card-text">Desde adolescente comenzó a cantar y al realizar una actuación en un supermercado, llamó la atención de una señora, quien era cónyuge de un director ejecutivo de un sello discográfico, por lo que firmó un contrato de grabación y con catorce años, lanzó su primer EP titulado.</p>
+          <a href="#" class="btn btn-primary">Nicky Jam</a>
+        </div>
+        <div class="col-md-4 product-card">
+          <div class="marquee-container">
+            <div class="marquee-content">
+              <img src="imag/cantante4.jpg" class="card-img-top" alt="Axl Rose">
+              <img src="imag/cantante5.jpg" class="card-img-top" alt="Axl Rose">
+              <img src="imag/cantante6.jpg" class="card-img-top" alt="Axl Rose">
+            </div>
+          </div>
+          <h5 class="card-title">Axl Rose</h5>
+          <p class="card-text">Aunque sus años de gloria parecen haber quedado muy atrás en el tiempo, Axl Rose siempre será recordado como una de las voces más destacadas de la historia del rock and roll, llegando incluso a ser el modelo a seguir de muchos aspirantes a cantantes. Por supuesto, del mismo modo que hoy hay millones de músicos que lo admiran, el líder de los Guns N’ Roses también creció idolatrando a distintas personas a las cuales vio como referencia en el aspecto vocal.</p>
+          <a href="#" class="btn btn-primary">Axl Rose</a>
+        </div>
+        <div class="col-md-4 product-card">
+          <marquee loop="infinite">
+            <img src="imag/cantante7.jpg" class="card-img-top" alt="Sebastián Yatra">
+            <img src="imag/cantante8.jpg" class="card-img-top" alt="Sebastián Yatra">
+            <img src="imag/cantante9.jpg" class="card-img-top" alt="Sebastián Yatra">
+          </marquee>
+          <h5 class="card-title">Sebastián Yatra</h5>
+          <p class="card-text">A los 27 años, Sebastián Yatra no solo tiene el mundo de la música a sus pies: es uno de los latinos más taquilleros del momento y su último hit "Tacones Rojos" es uno de los temas del momento. También protagoniza una serie musical en español que pronto estrena Netflix y ya grabó el programa La Voz para España, que se verá en 2022.</p>
+          <a href="#" class="btn btn-primary">Sebastián Yatra</a>
+        </div>
+        <div class="col-md-4 product-card">
+          <marquee loop="infinite">
+            <img src="imag/cantante10.jpg" class="clascard-img-top" alt="Pedro Fernández">
+            <img src="imag/cantante11.jpg" class="card-img-top" alt="Pedro Fernández">
+            <img src="imag/cantante12.jpg" class="card-img-top" alt="Pedro Fernández">
+            <img src="imag/cantante13.jpg" class="card-img-top" alt="Pedro Fernández">
+            </marquee>
+          <h5 class="card-title">Pedro Fernández</h5>
+          <p class="card-text">Siempre se recordará a Pedro Fernandez como el precioso cantante/actor infantil que cantó "La de la Mochila Azul" y captivó a un continente entero.
+
+            Lejos de ser aquel Pedrito, Fernandez es ahora un cantante maduro mariachi quien se ha establecido como uno de las vocalistas más prominentes del genero en México. Pero es probable que su nuevo álbum, "Amarte a la antigua",lo lleve más alto, gracias a su relación con la telenovela, "Hasta que el dinero nos separe", de la cual es protagonista.</p>
+          <a href="#" class="btn btn-primary">Pedro Fernández</a>
+        </div>
+        <div class="col-md-4 product-card">
+          <marquee loop="infinite">
+            <img src="imag/cantante14.jpg" class="card-img-top" alt=" Justin Bieber">
+            <img src="imag/cantante15.jpg" class="card-img-top" alt=" Justin Bieber">
+            <img src="imag/cantante16.jpg" class="card-img-top" alt=" Justin Bieber">
+            <img src="imag/cantante17.jpg" class="card-img-top" alt=" Justin Bieber">
+            </marquee>
+          <h5 class="card-title"> Justin Bieber</h5>
+          <p class="card-text">Hace cinco años, un adolescente canadiense con voz aniñada revolucionó Internet -y a las jóvenes de medio mundo- cada vez que agarraba el micrófono y meneaba su flequillo rubio. Se llama Justin Bieber y cuenta con una legión de fans, las Beliebers, pero también de anti-Biebers que le auguraban una caída tan estrepitosa como su vertiginoso ascenso. Sin embargo, el cantante, que el jueves cumple 18 años, sigue en lo más alto. ¿Su objetivo? Tocar el cielo del pop.</p>
+          <a href="#" class="btn btn-primary"> Justin Bieber</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="advertisement-section" style="background: url('fondo-anuncios.jpg') center/cover no-repeat;">
+      <div class="row">
+        <div class="col-md-6 advertisement-card video-container">
+          <video id="video1" width="100%" height="240" src="videos/vid1.mp4"  controls autoplay muted ></video>
+          <div  class="play-icon" onclick="toggleVideo('video1')"></div>
+        </div>
+        <div class="col-md-6 advertisement-card video-container">
+          <video id="video2" width="100%" height="240" src="videos/vid2.mp4"  controls autoplay muted ></video>
+          <div class="active" onclick="toggleVideo('video2')"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <h4>&copy; Cantante favorito 2023</h4>
+    <div class="whatsapp-icon">
+        <a href="https://api.whatsapp.com/" target="_blank">
+        <img src="4375153_logo_whatsapp_icon.png" alt="WhatsApp" >
+      </a>
+      <a href="https://gmail.google.com/" target="_blank">
+        <img src="gmail.png" alt="gmail" >
+      </a>
+      <a href="https://www.facebook.com/" target="_blank">
+        <img src="facebook.png" alt="facebook" >
+      </a>
+      <a href="https://www.instagram.com/" target="_blank">
+        <img src="instagram.png" alt="instagram" >
+      </a>
+      <a href="https://www.google.com/maps" target="_blank">
+        <img src="maps.png" alt="google maps" >
+      </a>
+    </div>
+  </footer>
+
+  <div class="modal" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Iniciar sesión</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm">
+            <div class="form-group">
+              <label for="username">Usuario:</label>
+              <input type="text" class="form-control" id="username" required>
+            </div>
+            <div class="form-group">
+              <label for="password">Contraseña:</label>
+              <input type="password" class="form-control" id="password" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="login()">Iniciar sesión</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      if (username === 'usuario' && password === 'contraseña') {
+        alert('Inicio de sesión exitoso');
+        $('#loginModal').modal('hide');
+      } else {
+        alert('Credenciales incorrectas');
+      }
+    }
+    function toggleVideo(videoId) {
+      var video = document.getElementById(videoId);
+
+      if (video.paused) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    }
+  </script>
+
+</body>
+</html>
